@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Convergent Scripture, Divergent Rulings</title>
+<meta name="description" content="Text-mining the muʿāmalāt verses across five Southeast Asian Qur'an editions: translation converges, fatwa diverges.">
+<style>
+  :root{
+    --bg:#f7f6f3; --card:#ffffff; --ink:#1c2529; --muted:#5c6b73;
+    --accent:#1f6f78; --accent-soft:#e3eef0; --line:#e4e2dc; --gold:#b8860b;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{ --bg:#12181b; --card:#1a2226; --ink:#e9edee; --muted:#9fb0b6;
+           --accent:#5fb3bd; --accent-soft:#1f2e31; --line:#2a353a; --gold:#d6a83a; }
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased}
+  .wrap{max-width:860px;margin:0 auto;padding:0 22px}
+  h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.2;letter-spacing:-.01em}
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  /* hero */
+  header{padding:72px 0 40px;border-bottom:1px solid var(--line)}
+  .kicker{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600}
+  h1{font-size:clamp(30px,5.4vw,46px);margin:.35em 0 .3em}
+  .sub{font-size:clamp(17px,2.4vw,20px);color:var(--muted);margin:0 0 22px;max-width:36em}
+  .byline{font-size:15px;color:var(--muted)}
+  .byline strong{color:var(--ink)}
+  .badge{display:inline-block;margin-top:16px;padding:5px 12px;border:1px solid var(--line);
+    border-radius:999px;font-size:13px;color:var(--muted);background:var(--card)}
+
+  section{padding:46px 0;border-bottom:1px solid var(--line)}
+  h2{font-size:clamp(22px,3.4vw,29px);margin:0 0 .1em}
+  .lead{color:var(--muted);margin:.2em 0 1.6em;max-width:40em}
+
+  /* finding cards */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+  .card .n{font:600 13px/1 system-ui;color:var(--accent);letter-spacing:.08em;text-transform:uppercase}
+  .card h3{font-size:19px;margin:.5em 0 .35em}
+  .card p{margin:0;font-size:14.5px;color:var(--muted)}
+
+  /* stat tiles */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:8px}
+  .stat{background:var(--accent-soft);border-radius:12px;padding:18px 14px;text-align:center}
+  .stat b{display:block;font:700 26px/1 Georgia,serif;color:var(--accent)}
+  .stat span{font-size:12.5px;color:var(--muted);display:block;margin-top:6px}
+
+  /* figures */
+  figure{margin:0 0 30px;background:var(--card);border:1px solid var(--line);border-radius:14px;
+    overflow:hidden}
+  figure img{display:block;width:100%;height:auto;background:#fff}
+  figcaption{padding:12px 18px;font-size:13.5px;color:var(--muted);border-top:1px solid var(--line)}
+  figcaption b{color:var(--ink);font-weight:600}
+
+  /* reproduce */
+  .repro{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px}
+  .btns{display:flex;flex-wrap:wrap;gap:12px;margin:16px 0 6px}
+  .btn{display:inline-block;padding:10px 18px;border-radius:10px;font-weight:600;font-size:14.5px}
+  .btn.primary{background:var(--accent);color:#fff}
+  .btn.ghost{border:1px solid var(--line);color:var(--ink)}
+  code{background:var(--accent-soft);padding:2px 7px;border-radius:6px;font-size:13.5px;
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+  pre{background:var(--accent-soft);padding:14px 16px;border-radius:10px;overflow-x:auto;
+    font-size:13px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;margin:12px 0 0}
+
+  footer{padding:40px 0 70px;color:var(--muted);font-size:13.5px}
+  footer p{margin:.4em 0}
+
+  @media (max-width:680px){
+    .cards{grid-template-columns:1fr}
+    .stats{grid-template-columns:repeat(2,1fr)}
+    header{padding:52px 0 32px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="kicker">Digital humanities · Islamic law · Southeast Asia</div>
+    <h1>Convergent Scripture, Divergent Rulings</h1>
+    <p class="sub">How five Southeast Asian states translate the economic Qur'an the same way — yet rule on it differently.</p>
+    <p class="byline"><strong>Muhammad Ulhaq</strong> · Universitas Islam Internasional Indonesia (UIII)</p>
+    <span class="badge">Working paper · under review at <em>Studia Islamika</em></span>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>The question</h2>
+    <p class="lead">Across Southeast Asia, rendering the Qur'an into a national language is the work of the
+      state. This study takes the <strong>muʿāmalāt</strong> (commercial-ethics) verses and asks two things
+      of five official editions: do their <em>translations</em> agree, and do the states' <em>fatwas</em> on
+      the economy agree? Transposing the text-mining method of Lange et al. (2021) from classical Arabic to a
+      multilingual corpus, it finds that the two layers come apart.</p>
+
+    <div class="cards">
+      <div class="card">
+        <div class="n">Layer 1 · Text</div>
+        <h3>Translation converges</h3>
+        <p>Cross-edition similarity is governed by language family. The Malay editions of Malaysia and Brunei
+          are the most similar pair of all.</p>
+      </div>
+      <div class="card">
+        <div class="n">Layer 2 · Law</div>
+        <h3>Fatwa diverges</h3>
+        <p>On bank interest, insurance, crypto, and tawarruq the same states run from most to least permissive:
+          Malaysia, Singapore, Brunei, Indonesia.</p>
+      </div>
+      <div class="card">
+        <div class="n">The result</div>
+        <h3>The layers decouple</h3>
+        <p>The most textually similar pair, Malaysia–Brunei, anchors opposite ends of the ruling spectrum. The
+          translation does not predict the fatwa.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>By the numbers</h2>
+    <div class="stats">
+      <div class="stat"><b>105</b><span>anchor verses × 5 editions</span></div>
+      <div class="stat"><b>0.92</b><span>Malaysia–Brunei similarity (highest)</span></div>
+      <div class="stat"><b>20</b><span>muʿāmalāt domains</span></div>
+      <div class="stat"><b>p &lt; 10⁻¹⁸</b><span>within-family &gt; cross-family</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>What the data shows</h2>
+    <p class="lead">Every rendering is embedded with LaBSE, a model that places sentences from different
+      languages in one comparable space; similarity is the cosine between editions, averaged over verses.</p>
+
+    <figure>
+      <img src="data/out/figs/fig1_similarity_heatmap.png" alt="Cross-edition similarity heatmap" loading="lazy">
+      <figcaption><b>Translation layer.</b> Cross-edition similarity of muʿāmalāt renderings (mean cosine).
+        The three Malay-family editions cluster tightly; Malaysia–Brunei is the closest pair.</figcaption>
+    </figure>
+
+    <figure>
+      <img src="data/out/figs/fig9_fatwa_strictness.png" alt="Fatwa strictness heatmap by state" loading="lazy">
+      <figcaption><b>Fatwa layer.</b> Strictness of each state's rulings on four muʿāmalāt issues
+        (1 permissive – 5 strict). Indonesia and Brunei are strictest; Malaysia most permissive.</figcaption>
+    </figure>
+
+    <figure>
+      <img src="data/out/figs/fig13_twolayer_scatter.png" alt="Two-layer decoupling scatter plot" loading="lazy">
+      <figcaption><b>The two layers decouple.</b> Translation similarity (x) does not predict fatwa distance (y):
+        the most similar pair, Malaysia–Brunei, sits at opposite ends of the ruling spectrum.</figcaption>
+    </figure>
+
+    <figure>
+      <img src="data/out/figs/fig3_domain_divergence.png" alt="Divergence by muamalat domain" loading="lazy">
+      <figcaption><b>Where editions disagree.</b> Divergence = 1 − mean cross-edition cosine, by domain.
+        Measures &amp; scales admit the most interpretive spread; inheritance the least.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Reproduce it yourself</h2>
+    <p class="lead">Everything behind the paper — corpus, code, cached embeddings — is open. A single notebook
+      recomputes the similarity matrix, re-runs the statistical tests, and plots the decoupling, from committed
+      data with no model download.</p>
+    <div class="repro">
+      <div class="btns">
+        <a class="btn primary" href="notebooks/reproduce_analysis.ipynb">Open the notebook →</a>
+        <a class="btn ghost" href="https://github.com/DzakiDU/convergent-scripture">View the repository</a>
+        <a class="btn ghost" href="DATA_SOURCES.md">Data &amp; sources</a>
+      </div>
+      <pre>git clone https://github.com/DzakiDU/convergent-scripture
+cd convergent-scripture
+pip install -r requirements.txt
+jupyter notebook notebooks/reproduce_analysis.ipynb</pre>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Method.</strong> Transposes Lange, van Kuppevelt &amp; van der Zwaan (2021), <em>Text Mining
+      Islamic Law</em>, <em>Islamic Law and Society</em> 28: 234–281 — replacing text-reuse with cross-edition
+      semantic similarity and using a parsimonious language model for the distinctive-vocabulary clouds.</p>
+    <p><strong>Cite.</strong> Muhammad Ulhaq, “Convergent Scripture, Divergent Rulings.” Working paper, 2026.</p>
+    <p>Code MIT-licensed. Qur'an translation strings remain the property of their national authorities and are
+      used here only as verse-level scholarly excerpts. See the repository for details.</p>
+  </div>
+</footer>
+
+</body>
+</html>
