@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this software or corpus, please cite the paper below."
+title: "Convergent Scripture, Divergent Rulings: text-mining the muʿāmalāt verses across five Southeast Asian Qur'an editions"
+authors:
+  - family-names: Ulhaq
+    given-names: Muhammad
+type: software
+license: MIT
+repository-code: "https://github.com/DzakiDU/convergent-scripture"
+keywords:
+  - digital humanities
+  - Islamic law
+  - Qur'an translation
+  - Southeast Asia
+  - sentence embeddings
+  - political economy
+preferred-citation:
+  type: article
+  title: "Convergent Scripture, Divergent Rulings: How Southeast Asian States Translate and Rule on the Economic Qur'an"
+  authors:
+    - family-names: Ulhaq
+      given-names: Muhammad
+  journal: "Studia Islamika"
+  year: 2026
+  notes: "Under review. Update volume/issue/DOI on acceptance."

@@ -1,0 +1,11 @@
+# Light stack — reproduces every reported number and figure from the CACHED
+# data in data/out/ (embeddings, matrices). This is all most users need.
+# Python 3.11+ recommended.
+numpy>=1.26
+pandas>=2.0
+scipy>=1.11
+matplotlib>=3.7
+seaborn>=0.13
+python-docx>=1.1        # only for scripts/09_build_docx.py
+# To RECOMPUTE the LaBSE embeddings from scratch, also install
+# requirements-embeddings.txt (heavier: torch + sentence-transformers).

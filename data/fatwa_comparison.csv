@@ -1,0 +1,18 @@
+country,issue,anchor_verse,stance,strictness_1to5,framing,source,evidence_tier
+Indonesia,Bank interest,2:275-279,Bank interest = riba nasi'ah; blanket haram,5,Moral/legalist,MUI Fatwa No.1/2004,fatwa
+Malaysia,Bank interest,2:275-279,Interest is riba in principle but system permits bai al-inah & tawarruq instruments,3,Technical/accommodation,SAC BNM; Muzakarah,fatwa
+Singapore,Bank interest,2:275-279,Pragmatic tolerance in minority context (necessity),2,Accommodation (darura),MUIS Fatwa Committee practice,inference
+Brunei,Bank interest,2:275-279,Riba prohibited; state-institutionalized Islamic banking (Islamic Banking Act Cap 168; BIBD; SFSB),5,Moral/state-institutional,Islamic Banking Act Cap 168; SFSB,inference
+Indonesia,Insurance/takaful,2:219;5:90,Conventional insurance haram (riba+gharar+maysir); takaful permitted,5,Moral + build alternative,DSN-MUI No.21/2001,fatwa
+Malaysia,Insurance/takaful,2:219;5:90,Takaful industry promoted; conventional discouraged,3,Technical/industry,BNM takaful regime,inference
+Singapore,Insurance/takaful,2:219;5:90,Conventional insurance permitted by necessity (takaful unavailable); CPF nomination = hibah,1,Accommodation (darura),MUIS 1988/2002; CPF fatwa 2010,fatwa
+Brunei,Insurance/takaful,2:219;5:90,Takaful Order 2008; Takaful Brunei; conventional discouraged,4,Moral/institutional,Takaful Order 2008,inference
+Indonesia,Crypto,2:219,Haram as currency; haram as commodity unless underlying asset+value; cites gharar/dharar/maysir,4,Moral/justice (harm),MUI Fatwa No.1/2022,fatwa
+Malaysia,Crypto,2:219,Conditional permissibility; SC-licensed exchanges; some tokens ruled Shariah-compliant,2,Technical/accommodation,Securities Commission SAC,fatwa
+Singapore,Crypto,2:219,Cautious; no blanket ruling,3,Undetermined,MUIS,inference
+Brunei,Crypto,2:219,BDCB advisory: not legal tender & unregulated; no formal religious fatwa located,4,Prudential/regulatory,BDCB/AMBD advisory 2017,advisory
+Malaysia,Tawarruq,2:275;2:282,Permissible (organized tawarruq); Bursa Suq al-Sila platform,1,Technical/accommodation,SAC BNM,fatwa
+Indonesia,Tawarruq,2:275;2:282,Permits tawarruq only by necessity (hajah) with qabd; rejects bai al-inah; sadd al-dhara'i reasoning,4,Legalist/substantive,DSN-MUI Fatwa 82/2011,fatwa
+Singapore,Tawarruq,2:275;2:282,Follows industry; limited local issuance,3,Undetermined,—,inference
+Brunei,Tawarruq,2:275;2:282,Equity/risk-sharing emphasis (musharakah/mudarabah/ijarah); no organized-tawarruq regime like Malaysia,4,Cautious,BDCB Islamic finance framework,inference
+OIC-Fiqh-Academy,Tawarruq,2:275;2:282,Organized tawarruq prohibited (classical tawarruq permitted),5,Legalist (benchmark),OIC IFA Resolution 2009,fatwa

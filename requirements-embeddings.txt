@@ -1,0 +1,10 @@
+# Heavy stack — ONLY needed to regenerate LaBSE embeddings (scripts/03, 10) or
+# the extra Python figures (scripts/10, 11). The repo ships data/out/embeddings.npy
+# so this is optional. Best installed in its own virtualenv.
+sentence-transformers>=2.2
+torch>=2.0
+scikit-learn>=1.3       # t-SNE in scripts/10
+arabic-reshaper>=3.0    # Arabic close-reading figure (scripts/10, 12)
+python-bidi>=0.4        # RTL rendering
+plotly>=5.0             # choropleth (scripts/11)
+kaleido>=0.2            # static export of plotly figures

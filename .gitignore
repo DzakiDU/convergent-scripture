@@ -1,0 +1,28 @@
+# OS / editor
+.DS_Store
+*.swp
+.Rhistory
+.RData
+.Rproj.user/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Large / regenerable model cache (kept out of git; regenerate with scripts/03)
+# NOTE: data/out/embeddings.npy (1.5 MB) IS committed so the notebook runs
+#       without downloading the 1.8 GB LaBSE model. Comment the next line back
+#       in if you prefer to exclude it.
+# data/out/embeddings.npy
+
+# Manuscript & internal planning (keep the repo about the METHOD, not the draft).
+# The paper is under review; exclude drafts and planning notes from the public repo.
+manuscript/
+protokol-replikasi-tafsir-ekonomi-asean.md
+brunei_fill_template.csv
+
+# Claude Code local settings
+.claude/

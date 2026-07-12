@@ -1,0 +1,18 @@
+Ringkasan uji statistik POC
+===========================
+# A tibble: 10 x 6
+   pair   mean    lo    hi label                        family      
+   <chr> <dbl> <dbl> <dbl> <chr>                        <chr>       
+ 1 id-bn 0.901 0.889 0.912 "Indonesia\u2013Brunei"      Malay family
+ 2 id-ms 0.876 0.863 0.888 "Indonesia\u2013Malaysia"    Malay family
+ 3 id-th 0.770 0.756 0.784 "Indonesia\u2013Thailand"    Cross-family
+ 4 id-tl 0.779 0.759 0.797 "Indonesia\u2013Philippines" Cross-family
+ 5 ms-bn 0.923 0.911 0.934 "Malaysia\u2013Brunei"       Malay family
+ 6 ms-th 0.771 0.757 0.785 "Malaysia\u2013Thailand"     Cross-family
+ 7 ms-tl 0.751 0.730 0.770 "Malaysia\u2013Philippines"  Cross-family
+ 8 th-bn 0.780 0.766 0.793 "Thailand\u2013Brunei"       Cross-family
+ 9 th-tl 0.709 0.691 0.726 "Thailand\u2013Philippines"  Cross-family
+10 tl-bn 0.758 0.736 0.778 "Philippines\u2013Brunei"    Cross-family
+
+Wilcoxon within>cross: V= 5564  p= 3.04643e-19 
+Kruskal antar-domain: chi2= 35.85573  df= 15  p= 0.001854502 
