@@ -3,7 +3,7 @@ message: "If you use this software or corpus, please cite the paper below."
 title: "Convergent Scripture, Divergent Rulings: text-mining the muʿāmalāt verses across five Southeast Asian Qur'an editions"
 authors:
   - family-names: Ulhaq
-    given-names: Muhammad
+    given-names: Muhammad Dzaki Dhiya
 type: software
 license: MIT
 repository-code: "https://github.com/DzakiDU/convergent-scripture"
@@ -16,10 +16,10 @@ keywords:
   - political economy
 preferred-citation:
   type: article
-  title: "Convergent Scripture, Divergent Rulings: How Southeast Asian States Translate and Rule on the Economic Qur'an"
+  title: "Convergent Scripture, Divergent Rulings: Qur'ān Translation and Islamic Economic Fatwas across Southeast Asia"
   authors:
     - family-names: Ulhaq
-      given-names: Muhammad
+      given-names: Muhammad Dzaki Dhiya
   journal: "Studia Islamika"
   year: 2026
   notes: "Under review. Update volume/issue/DOI on acceptance."
